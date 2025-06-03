@@ -1,11 +1,6 @@
 from psychopy import visual, core, event
 import numpy as np
 
-############   GLOBAL VARIABLES   #########################
-
-win_size = (800, 600)  # Default window size
-
-
 
 ####    WINDOW      #########################
 
@@ -214,3 +209,13 @@ def create_black_dot(win):
         fillColor='black',
         lineColor='black'
     )
+
+
+def create_looming_stim(win):
+    return visual.Circle(
+        win=win,
+        radius=1,
+        fillColor='black',
+        lineColor='black',
+        )
+
