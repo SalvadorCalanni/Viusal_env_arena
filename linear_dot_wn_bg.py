@@ -42,11 +42,12 @@ def main(win_size):
             dot.draw()
 
         if looming_active:
-            if looming_stim.radius < 500:  # Limit the maximum size
+            if looming_stim.radius < 300:  # Limit the maximum size
                 looming_stim.radius += int(looming_speed)
                 looming_stim.draw()
             else:
                 looming_active = False  # Stop looming when max size is reached
+        win.flip()
         core.wait(0.016)
 
     win.close()
